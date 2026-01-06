@@ -12,6 +12,10 @@ public class GameLogic {
     private boolean gameWon;
 
     public GameLogic(String word) {
+        reset(word);
+    }
+
+    public void reset(String word) {
         this.targetWord = word.toUpperCase();
         this.guessedLetters = new HashSet<>();
         this.remainingLives = Constants.MAX_LIVES;
